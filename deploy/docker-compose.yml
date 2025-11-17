@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    container_name: modulo-productos-db
+    restart: always
+    environment:
+      POSTGRES_USER: productos
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: usuarios_db
+    ports:
+      - "5436:5432"  
+    volumes:
+      - productos_db_vol:/var/lib/postgresql/data
+
+volumes:
+  productos_db_vol:
+
