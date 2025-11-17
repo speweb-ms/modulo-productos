@@ -12,7 +12,7 @@ services:
     ports:
       - "5436:5432"  
     volumes:
-      - productos_db_vol:/var/lib/postgresql/data
+      - productos_db_vol:/var/lib/postgresql
 
 volumes:
   productos_db_vol:
